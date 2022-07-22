@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { DaoProvider } from './context/DaoContext';
 
 // Import thirdweb provider and Rinkeby ChainId
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
@@ -11,10 +12,10 @@ const activeChainId = ChainId.Rinkeby;
 
 // Wrap your app with the thirdweb provider
 ReactDOM.render(
-  <React.StrictMode>
-    <ThirdwebProvider desiredChainId={activeChainId}>
+  <ThirdwebProvider desiredChainId={activeChainId}>
+    <DaoProvider>
       <App />
-    </ThirdwebProvider>
-  </React.StrictMode>,
+    </DaoProvider>
+  </ThirdwebProvider>,
   document.getElementById('root'),
 );

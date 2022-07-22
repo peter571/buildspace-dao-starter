@@ -33,5 +33,3 @@ import { readFileSync } from "fs";
     console.log("failed to deploy editionDrop contract", error);
   }
 })();
-
-//CONTRACT ADDRESS = 0xCE11518dcDC1ABC1127D630Cb5A327bD53D7F3cf
